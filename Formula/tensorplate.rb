@@ -2,8 +2,8 @@
 class Tensorplate < Formula
   desc "Operator CLI for TensorPlate edge inference devices"
   homepage "https://github.com/tensorplate/tensorplate"
-  url "https://github.com/tensorplate/tensorplate/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "62451e839007e5d94ed855829b0e8bad4e21f751922186f890d45fcc3bf6c4f1"
+  url "https://github.com/tensorplate/tensorplate/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "39a2ece945c5a2c204d4cef3f8f71b6156a15324539f28f953ef6c7600ec7a22"
   license "Apache-2.0"
   head "https://github.com/tensorplate/tensorplate.git", branch: "develop"
 
