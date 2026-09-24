@@ -20,6 +20,15 @@ jobs:
       - name: Tap this checkout
         run: brew tap tensorplate/tap "$PWD"
 
+      # Homebrew refuses to load a formula from a tap nobody has trusted, so
+      # every step below fails on a runner without this: `Refusing to load
+      # formula tensorplate/tap/<name> from untrusted tap tensorplate/tap`.
+      # Trusting the tap covers every formula in it, including ones added
+      # later. This is the checkout under test on a throwaway runner, which
+      # is the one place trusting a whole tap costs nothing.
+      - name: Trust this tap
+        run: brew trust tensorplate/tap
+
       - name: Audit and style
         run: |
           brew audit --strict --online tensorplate/tap/tensorplate
